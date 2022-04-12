@@ -5,7 +5,7 @@ phases:
     commands:
       - echo Starting Kics scan
       - echo $PWD
-      - docker run -v $PWD:/path checkmarx/kics scan --no-progress --ignore-on-exit all -p /path -o /path --report-formats junit --output-name kics-report
+      - docker run -v $PWD:/path checkmarx/kics:latest scan --no-progress --ignore-on-exit all -p /path -o /path --report-formats junit --output-name kics-report
 reports:
   kics-report:
     files:
